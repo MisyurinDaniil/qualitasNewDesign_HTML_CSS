@@ -8,153 +8,194 @@
         <title>Document</title>
     </head>
     <body>
-        <header>
+        <header class="header">
             <div class="container">
-                <nav>
-                    <div class="logo">
-                        <a href="" class="logo__link">
-                            <img
-                                src="img/logo_qualitas_leather.svg"
-                                alt="Логотип qualitas leather"
-                                class="logo__img"
-                            />
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item">Главная</li>
-                            <li class="nav__item">Катлог</li>
-                            <li class="nav__item">Блог</li>
-                            <li class="nav__item">Информация</li>
-                            <li class="nav__item">Контакты</li>
-                        </ul>
-                    </div>
+                <div class="logo header__logo">
+                    <a href="" class="logo__link">
+                        <img
+                            src="img/logo_qualitas_leather.svg"
+                            alt="Логотип qualitas leather"
+                            class="logo__img"
+                        />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">Главная</li>
+                        <li class="nav__item">Катлог</li>
+                        <li class="nav__item">Блог</li>
+                        <li class="nav__item">Информация</li>
+                        <li class="nav__item">Контакты</li>
+                    </ul>
                 </nav>
-                <h1>Мастерская кожаных изделий ручной работы</h1>
+                <div class="burger">
+                    <span></span>
+                </div>
+                <h1 class="h1-title">Мастерская кожаных изделий ручной работы</h1>
             </div>
         </header>
-        <section>
+        <section class="main">
             <div class="container">
                 <div class="catalog">
-                    <div class="h2-title">
-                        <h2>Каталог</h2>
-                        <span class="underline"></span>
+                    <div class="h2">
+                        <h2 class="h2__title">Каталог</h2>
+                        <span class="h2__underline"></span>
                     </div>
                     <ul class="catalog__list">
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/belts.jpg" alt="Ремни" class="catalog-item__img">
+                            <p class="catalog-item__p">Ремни</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/watch_strap.jpg" alt="Ремешки для часов" class="catalog-item__img">
+                            <p class="catalog-item__p">Ремешки для часов</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/cardholders.jpg" alt="Картхолдеры" class="catalog-item__img">
+                            <p class="catalog-item__p">Картхолдеры</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/wallets.jpg" alt="Кошельки" class="catalog-item__img">
+                            <p class="catalog-item__p">Кошельки</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/document_covers.jpg" alt="Чехлы для ручек" class="catalog-item__img">
+                            <p class="catalog-item__p">Обложки для паспорта</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/covers_for_pens.jpg" alt="Чехлы для ручек" class="catalog-item__img">
+                            <p class="catalog-item__p">Чехлы для ручек</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/money_clips.jpg" alt="Зажимы для денег" class="catalog-item__img">
+                            <p class="catalog-item__p">Зажимы для денег</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/bags.jpg" alt="Сумки" class="catalog-item__img">
+                            <p class="catalog-item__p">Сумки</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/accessories.jpg" alt="Аксессуары" class="catalog-item__img">
+                            <p class="catalog-item__p">Аксессуары</p>
                         </li>
-                        <li class="catalog__item">
-                            <img
-                                src=""
-                                alt=""
-                                class="catalog__image"
-                            /><span></span>
+                        <li class="catalog-item">
+                            <img src="img/other.jpg " alt="Другое" class="catalog-item__img">
+                            <p class="catalog-item__p">Другое</p>
                         </li>
                     </ul>
                 </div>
-                <div class="our-philosophy">
-                    <div class="h2-title">
-                        <h2>Наша философия</h2>
-                        <span class="underline"></span>
+                <div class="philosophy">
+                    <div class="h2">
+                        <h2 class="h2__title">Наша философия</h2>
+                        <span class="h2__underline"></span>
                     </div>
-                    <div class="our-philosophy__list">
-                        <div class="our-philosophy__item">
-                            <h3 class="our-philosophy__item__title">Следование традициям</h3>
-                            <p class="our-philosophy__item__p">Последовая примеру отца, который занимался ремотом обуви, мы реши создать первый кошелек.</p>
+                    <div class="philosophy__list">
+                        <div class="philosophy__item">
+                            <h3 class="our-philosophy__item__title">
+                                Следование традициям
+                            </h3>
+                            <p class="our-philosophy__item__p">
+                                Последовая примеру отца, который занимался
+                                ремотом обуви, мы реши создать первый кошелек.
+                            </p>
                         </div>
                         <div class="our-philosophy__item">
-                            <h3 class="our-philosophy__item__title">Внимание к деталям</h3>
-                            <p class="our-philosophy__item__p">Мы устремили свое внимание на простоту и дизайн изделий, при этом не перегружаем их излишней функциональностью</p>
+                            <h3 class="our-philosophy__item__title">
+                                Внимание к деталям
+                            </h3>
+                            <p class="our-philosophy__item__p">
+                                Мы устремили свое внимание на простоту и дизайн
+                                изделий, при этом не перегружаем их излишней
+                                функциональностью
+                            </p>
                         </div>
                         <div class="our-philosophy__item">
-                            <h3 class="our-philosophy__item__title">Профессионализм</h3>
-                            <p class="our-philosophy__item__p">Чтобы перенять весь опыт и мастерство предков, потребовалось несколько лет обучения и практики.</p>
+                            <h3 class="our-philosophy__item__title">
+                                Профессионализм
+                            </h3>
+                            <p class="our-philosophy__item__p">
+                                Чтобы перенять весь опыт и мастерство предков,
+                                потребовалось несколько лет обучения и практики.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="additional_services">
-                    <div class="h2-title">
-                        <h2>Дополнительные услуги</h2>
-                        <span class="underline"></span>
+                <div class="services">
+                    <div class="h2">
+                        <h2 class="h2__title">Дополнительные услуги</h2>
+                        <span class="h2__underline"></span>
                     </div>
-                    <div class="additional_services__list">
-                        <div class="additional_services__item">
-                            <img src="" alt="" class="additional_services__item__img">
-                            <p class="additional_services__item__p"></p>
+                    <div class="services__list">
+                        <div class="services__item">
+                            <img
+                                src="img/choice_leather_and_accessories.jpg"
+                                alt="Выбор кожи и фурнитуры"
+                                class="services__item__img"
+                            />
+                            <p class="services__item__p">Выбор кожи и фурнитуры</p>
                         </div>
-                        <div class="additional_services__item">
-                            <img src="" alt="" class="additional_services__item__img">
-                            <p class="additional_services__item__p"></p>
+                        <div class="services__item">
+                            <img
+                                src="img/drawing_picture.jpg"
+                                alt="Нанесение рисунка"
+                                class="services__item__img"
+                            />
+                            <p class="services__item__p">Нанесение рисунка</p>
                         </div>
-                        <div class="additional_services__item">
-                            <img src="" alt="" class="additional_services__item__img">
-                            <p class="additional_services__item__p"></p>
+                        <div class="services__item">
+                            <img
+                                src="img/personalization.jpg"
+                                alt="Персонализация"
+                                class="services__item__img"
+                            />
+                            <p class="services__item__p">Персонализация</p>
                         </div>
                     </div>
+                </div>
+                <div class="advantages">
+                    <div class="h2">
+                        <h2 class="h2__title">Наши преимущества</h2>
+                        <span class="h2__underline"></span>
+                    </div>
+                    <ul class="advantages__list">
+                        <li class="advantages__item">
+                            <img src="img/handmade.svg" alt="Ручная работа" class="advantages__item__img">
+                            <p class="advantages__item__p">Ручная работа</p>
+                        </li>
+                        <li class="advantages__item">
+                            <img src="img/genuine_leather.svg" alt="Только натуральная кожа" class="advantages__item__img">
+                            <p class="advantages__item__p">Только натуральная кожа</p>
+                        </li>
+                        <li class="advantages__item">
+                            <img src="img/individual_approach.svg" alt="Индивидуальный подход" class="advantages__item__img">
+                            <p class="advantages__item__p">Индивидуальный подход</p>
+                        </li>
+                        <li class="advantages__item">
+                            <img src="img/great_experience.svg" alt="Большой опыт работы с кожей" class="advantages__item__img">
+                            <p class="advantages__item__p">Большой опыт работы с кожей</p>
+                        </li>
+                        <li class="advantages__item">
+                            <img src="img/delivery.svg" alt="Доставка в любую точку" class="advantages__item__img">
+                            <p class="advantages__item__p">Доставка в любую точку</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <footer></footer>
+        <footer class="footer">
+            <div class="logo footer__logo">
+                <a href="" class="logo__link">
+                    <img
+                        src="img/logo_qualitas_leather.svg"
+                        alt="Логотип qualitas leather"
+                        class="logo__img"
+                    />
+                </a>
+                <div class="gray-line"></div>
+                <div class="contacts">
+                    ul.cont
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
