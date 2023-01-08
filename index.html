@@ -9,7 +9,7 @@
     </head>
     <body>
         <header class="header">
-            <div class="container">
+            <div class="container container-header">
                 <div class="logo header__logo">
                     <a href="" class="logo__link">
                         <img
@@ -19,21 +19,38 @@
                         />
                     </a>
                 </div>
+                <div class="burger">
+                    <span class="burger__span"></span>
+                </div>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item">Главная</li>
-                        <li class="nav__item">Катлог</li>
-                        <li class="nav__item">Блог</li>
-                        <li class="nav__item">Информация</li>
-                        <li class="nav__item">Контакты</li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__item__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__item__link">Катлог</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__item__link">Блог</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__item__link">Информация</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__item__link">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
-                <div class="burger">
-                    <span></span>
+            </div>
+            <div class="container">
+                <div class="h1">
+                    <h1 class="h1__title">
+                        Мастерская кожаных изделий ручной работы
+                    </h1>
                 </div>
-                <h1 class="h1-title">Мастерская кожаных изделий ручной работы</h1>
             </div>
         </header>
+
         <section class="main">
             <div class="container">
                 <div class="catalog">
@@ -43,44 +60,106 @@
                     </div>
                     <ul class="catalog__list">
                         <li class="catalog-item">
-                            <img src="img/belts.jpg" alt="Ремни" class="catalog-item__img">
-                            <p class="catalog-item__p">Ремни</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/belts.jpg"
+                                    alt="Ремни"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Ремни</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/watch_strap.jpg" alt="Ремешки для часов" class="catalog-item__img">
-                            <p class="catalog-item__p">Ремешки для часов</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/watch_strap.jpg"
+                                    alt="Ремешки для часов"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Ремешки для часов</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/cardholders.jpg" alt="Картхолдеры" class="catalog-item__img">
-                            <p class="catalog-item__p">Картхолдеры</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/cardholders.jpg"
+                                    alt="Картхолдеры"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Картхолдеры</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/wallets.jpg" alt="Кошельки" class="catalog-item__img">
-                            <p class="catalog-item__p">Кошельки</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/wallets.jpg"
+                                    alt="Кошельки"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Кошельки</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/document_covers.jpg" alt="Чехлы для ручек" class="catalog-item__img">
-                            <p class="catalog-item__p">Обложки для паспорта</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/document_covers.jpg"
+                                    alt="Чехлы для ручек"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">
+                                    Обложки для паспорта
+                                </p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/covers_for_pens.jpg" alt="Чехлы для ручек" class="catalog-item__img">
-                            <p class="catalog-item__p">Чехлы для ручек</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/covers_for_pens.jpg"
+                                    alt="Чехлы для ручек"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Чехлы для ручек</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/money_clips.jpg" alt="Зажимы для денег" class="catalog-item__img">
-                            <p class="catalog-item__p">Зажимы для денег</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/money_clips.jpg"
+                                    alt="Зажимы для денег"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Зажимы для денег</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/bags.jpg" alt="Сумки" class="catalog-item__img">
-                            <p class="catalog-item__p">Сумки</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/bags.jpg"
+                                    alt="Сумки"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Сумки</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/accessories.jpg" alt="Аксессуары" class="catalog-item__img">
-                            <p class="catalog-item__p">Аксессуары</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/accessories.jpg"
+                                    alt="Аксессуары"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Аксессуары</p>
+                            </a>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/other.jpg " alt="Другое" class="catalog-item__img">
-                            <p class="catalog-item__p">Другое</p>
+                            <a href="" class="catalog-item__link">
+                                <img
+                                    src="img/other.jpg "
+                                    alt="Другое"
+                                    class="catalog-item__img"
+                                />
+                                <p class="catalog-item__p">Другое</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -120,6 +199,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 
                 <div class="services">
                     <div class="h2">
                         <h2 class="h2__title">Дополнительные услуги</h2>
@@ -132,7 +212,9 @@
                                 alt="Выбор кожи и фурнитуры"
                                 class="services__item__img"
                             />
-                            <p class="services__item__p">Выбор кожи и фурнитуры</p>
+                            <p class="services__item__p">
+                                Выбор кожи и фурнитуры
+                            </p>
                         </div>
                         <div class="services__item">
                             <img
@@ -159,29 +241,58 @@
                     </div>
                     <ul class="advantages__list">
                         <li class="advantages__item">
-                            <img src="img/handmade.svg" alt="Ручная работа" class="advantages__item__img">
+                            <img
+                                src="img/handmade.svg"
+                                alt="Ручная работа"
+                                class="advantages__item__img"
+                            />
                             <p class="advantages__item__p">Ручная работа</p>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/genuine_leather.svg" alt="Только натуральная кожа" class="advantages__item__img">
-                            <p class="advantages__item__p">Только натуральная кожа</p>
+                            <img
+                                src="img/genuine_leather.svg"
+                                alt="Только натуральная кожа"
+                                class="advantages__item__img"
+                            />
+                            <p class="advantages__item__p">
+                                Только натуральная кожа
+                            </p>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/individual_approach.svg" alt="Индивидуальный подход" class="advantages__item__img">
-                            <p class="advantages__item__p">Индивидуальный подход</p>
+                            <img
+                                src="img/individual_approach.svg"
+                                alt="Индивидуальный подход"
+                                class="advantages__item__img"
+                            />
+                            <p class="advantages__item__p">
+                                Индивидуальный подход
+                            </p>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/great_experience.svg" alt="Большой опыт работы с кожей" class="advantages__item__img">
-                            <p class="advantages__item__p">Большой опыт работы с кожей</p>
+                            <img
+                                src="img/great_experience.svg"
+                                alt="Большой опыт работы с кожей"
+                                class="advantages__item__img"
+                            />
+                            <p class="advantages__item__p">
+                                Большой опыт работы с кожей
+                            </p>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/delivery.svg" alt="Доставка в любую точку" class="advantages__item__img">
-                            <p class="advantages__item__p">Доставка в любую точку</p>
+                            <img
+                                src="img/delivery.svg"
+                                alt="Доставка в любую точку"
+                                class="advantages__item__img"
+                            />
+                            <p class="advantages__item__p">
+                                Доставка в любую точку
+                            </p>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </section>
+        <!-- 
         <footer class="footer">
             <div class="logo footer__logo">
                 <a href="" class="logo__link">
@@ -193,9 +304,60 @@
                 </a>
                 <div class="gray-line"></div>
                 <div class="contacts">
-                    ul.cont
+                    <ul class="contacts__list">
+                        <li class="contacts__item">
+                            <a href="tel:+79896307755">
+                                <img
+                                    src="img/call.svg"
+                                    alt="Звонок"
+                                    class="contacts__item__img"
+                                />
+                                <p class="contacts__item__p">Звонок</p>
+                                <p class="contacts__item__p">
+                                    + 7 (977) 012-90-15
+                                </p>
+                            </a>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="https://t.me/+79896307755">
+                                <img
+                                    src="img/telegram.svg"
+                                    alt="Telegram"
+                                    class="contacts__item__img"
+                                />
+                                <p class="contacts__item__p">Telegram</p>
+                                <p class="contacts__item__p">
+                                    + 7 (977) 012-90-15
+                                </p>
+                            </a>
+                        </li>
+                        <li class="contacts__item">
+                            <a
+                                href="https://www.instagram.com/qualitas_leather/"
+                            >
+                                <img
+                                    src="img/instagram.svg"
+                                    alt="Instagram"
+                                    class="contacts__item__img"
+                                />
+                                <p class="contacts__item__p">Instagram</p>
+                                <p class="contacts__item__p">
+                                    #qualitas_leather
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gray-line"></div>
+                <div class="all-rights-reserved">
+                    <p class="all-rights-reserved__p">
+                        © 2020 QualitasLeather. All rights reserved.
+                    </p>
+                    <p class="all-rights-reserved__p">
+                        Designed by Daniil Misyurin
+                    </p>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </body>
 </html>
