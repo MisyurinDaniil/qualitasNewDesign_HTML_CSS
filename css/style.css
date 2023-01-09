@@ -195,9 +195,9 @@ select {
    */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
     -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
    */
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
@@ -218,9 +218,9 @@ button::-moz-focus-inner,
    */
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -269,8 +269,8 @@ textarea {
    * 2. Remove the padding in IE 10.
    */
 
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -279,8 +279,8 @@ textarea {
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -289,7 +289,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 
-[type='search'] {
+[type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
@@ -298,7 +298,7 @@ textarea {
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
-[type='search']::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -356,23 +356,23 @@ template {
 
 @font-face {
     /* font-weight: 400; */
-    font-family: 'Cuprum';
+    font-family: "Cuprum";
     font-style: normal;
-    src: url('../fonts/Cuprum-VariableFont_wght.woff2') format('woff2'),
-        url('../fonts/Cuprum-VariableFont_wght.woff') format('woff');
+    src: url("../fonts/Cuprum-VariableFont_wght.woff2") format("woff2"),
+        url("../fonts/Cuprum-VariableFont_wght.woff") format("woff");
 }
 @font-face {
     /* font-weight: 400; */
-    font-family: 'OpenSans';
+    font-family: "OpenSans";
     font-style: normal;
-    src: url('../fonts/Opensans.woff2') format('woff2'),
-        url('../fonts/Opensans.woff') format('woff');
+    src: url("../fonts/Opensans.woff2") format("woff2"),
+        url("../fonts/Opensans.woff") format("woff");
 }
 /******************************
 ********** Main ****************
 *****************************/
 body {
-    font-family: 'OpenSans';
+    font-family: "OpenSans";
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -384,9 +384,10 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Cuprum';
+    font-family: "Cuprum";
     font-weight: 400;
     font-style: normal;
+    margin: 0;
 }
 *,
 ::after,
@@ -406,7 +407,7 @@ h4 {
 *****************************/
 .header {
     height: 568px;
-    background-image: url('../img/manufacturing_process.jpg');
+    background-image: url("../img/manufacturing_process.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -447,7 +448,7 @@ h4 {
 }
 .burger::before,
 .burger::after {
-    content: '';
+    content: "";
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -487,10 +488,8 @@ h4 {
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 10px;
-
 }
 .h2__title {
-    margin: 0;
     font-size: 26px;
 }
 .h2__underline {
@@ -499,7 +498,7 @@ h4 {
     background-color: #d78e36;
 }
 /******************************
-****** Content - catalog ******
+****** Content / Catalog ******
 *****************************/
 .catalog__list {
     margin: 0;
@@ -517,24 +516,64 @@ h4 {
     padding-right: 12px;
     margin-bottom: 24px;
     width: 50%;
+    /* overflow: hidden; */
 }
 .catalog-item__link {
+    overflow: hidden;
+    display: block;
     text-decoration: none;
     color: #fff;
 }
 .catalog-item__img {
     display: block;
+    overflow: hidden;
+    transition: 0.5s;
     width: 100%;
+    filter: brightness(90%)
+}
+.catalog-item__img:hover {
+    transform: scale(1.2);
 }
 .catalog-item__p {
     width: calc(100% - 38px);
     text-transform: uppercase;
     font-size: 12px;
     margin: 0;
-    padding: 0;
     position: absolute;
     top: calc(100% - 34px);
     left: 20px;
 }
+
+/******************************
+****** Content / Our philosophy ******
+*****************************/
+
+.philosophy__item {
+    width: 100%;
+    position: relative;
+}
+.philosophy__item__img {
+    display: block;
+    width: 100%;
+    opacity: 0.4;
+}
+.philosophy__item__text {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%); 
+}
+.philosophy__item__title {
+    margin: 0;
+    font-size: 22px;
+}
+.philosophy__item__p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 130%;
+    margin-top: 5px;
+}
+
 @media (max-width: 767px) {
 }
