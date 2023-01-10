@@ -195,9 +195,9 @@ select {
    */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
     -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
    */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
@@ -218,9 +218,9 @@ button::-moz-focus-inner,
    */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -269,8 +269,8 @@ textarea {
    * 2. Remove the padding in IE 10.
    */
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -279,8 +279,8 @@ textarea {
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -289,7 +289,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 
-[type="search"] {
+[type='search'] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
@@ -298,7 +298,7 @@ textarea {
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -356,23 +356,28 @@ template {
 
 @font-face {
     /* font-weight: 400; */
-    font-family: "Cuprum";
+    font-family: 'Cuprum';
     font-style: normal;
-    src: url("../fonts/Cuprum-VariableFont_wght.woff2") format("woff2"),
-        url("../fonts/Cuprum-VariableFont_wght.woff") format("woff");
+    src: url('../fonts/Cuprum-VariableFont_wght.woff2') format('woff2'),
+        url('../fonts/Cuprum-VariableFont_wght.woff') format('woff');
 }
 @font-face {
     /* font-weight: 400; */
-    font-family: "OpenSans";
+    font-family: 'OpenSans';
     font-style: normal;
-    src: url("../fonts/Opensans.woff2") format("woff2"),
-        url("../fonts/Opensans.woff") format("woff");
+    src: url('../fonts/Opensans.woff2') format('woff2'),
+        url('../fonts/Opensans.woff') format('woff');
 }
 /******************************
 ********** Main ****************
 *****************************/
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
 body {
-    font-family: "OpenSans";
+    font-family: 'OpenSans';
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -384,15 +389,17 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Cuprum";
+    font-family: 'Cuprum';
     font-weight: 400;
     font-style: normal;
     margin: 0;
 }
-*,
-::after,
-::before {
-    box-sizing: border-box;
+p {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
 }
 .container {
     width: 100%;
@@ -407,7 +414,7 @@ h4 {
 *****************************/
 .header {
     height: 568px;
-    background-image: url("../img/manufacturing_process.jpg");
+    background-image: url('../img/manufacturing_process.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -448,7 +455,7 @@ h4 {
 }
 .burger::before,
 .burger::after {
-    content: "";
+    content: '';
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -481,7 +488,7 @@ h4 {
     margin-top: 278px;
 }
 /******************************
-****** Content - H2 ******
+****** Content / H2 ******
 *****************************/
 .h2 {
     display: flex;
@@ -501,8 +508,6 @@ h4 {
 ****** Content / Catalog ******
 *****************************/
 .catalog__list {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     margin-left: -12px;
@@ -529,7 +534,7 @@ h4 {
     overflow: hidden;
     transition: 0.5s;
     width: 100%;
-    filter: brightness(90%)
+    filter: brightness(90%);
 }
 .catalog-item__img:hover {
     transform: scale(1.2);
@@ -544,36 +549,88 @@ h4 {
     left: 20px;
 }
 
-/******************************
-****** Content / Our philosophy ******
-*****************************/
+/********************************
+**** Content / Our philosophy ****
+*********************************/
 
 .philosophy__item {
     width: 100%;
     position: relative;
 }
-.philosophy__item__img {
+.philosophy__item-img {
     display: block;
     width: 100%;
     opacity: 0.4;
 }
-.philosophy__item__text {
+.philosophy__item-text {
     width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 .philosophy__item__title {
     margin: 0;
     font-size: 22px;
 }
-.philosophy__item__p {
+.philosophy__item-p {
     margin: 0;
     font-size: 14px;
     line-height: 130%;
     margin-top: 5px;
 }
 
+/********************************
+**** Content / Servicesy ****
+*********************************/
+.services__item {
+    position: relative;
+}
+.services__item-img {
+    display: block;
+    width: 100%;
+}
+.services__item-p {
+    font-size: 20px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+/********************************
+**** Content / Advantages ****
+*********************************/
+.advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: -24px;
+    margin-left: -12x;
+    margin-right: -12px;
+}
+.advantages__item {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center; 
+    list-style: none;
+    width: 115px;
+    height: 115px;
+    border: 1px solid #D78E36;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+.advantages__item-img, .advantages__item-p {
+}
+.advantages__item-img {
+}
+.advantages__item-p {
+    width: 90%;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 10px;
+}
 @media (max-width: 767px) {
 }
