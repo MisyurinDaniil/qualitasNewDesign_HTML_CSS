@@ -604,25 +604,23 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 10px;
     margin-bottom: -24px;
-    margin-left: -12x;
-    margin-right: -12px;
 }
 .advantages__item {
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center; 
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    width: 115px;
-    height: 115px;
-    border: 1px solid #D78E36;
+    width: 136px;
+    height: 136px;
+    border: 1px solid #d78e36;
     border-radius: 50%;
-    margin-left: 12px;
-    margin-right: 12px;
     margin-bottom: 24px;
 }
-.advantages__item-img, .advantages__item-p {
+.advantages__item-img,
+.advantages__item-p {
 }
 .advantages__item-img {
 }
@@ -630,6 +628,68 @@ ul {
     width: 90%;
     text-align: center;
     margin-top: 3px;
+    font-size: 12px;
+}
+/********************************
+**** Content / Footer ****
+*********************************/
+.footer {
+    margin-top: 40px;
+    background-color: #191919;
+    padding-top: 15px;
+}
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__logo {
+    width: 170px;
+    margin-bottom: 15px;
+}
+.gray-line {
+    width: 70%;
+    height: 1px;
+    background-color: #282828;
+}
+.contacts {
+    width: 100%;
+}
+.contacts__list {
+    display: flex;
+    justify-content: space-between;
+}
+.contacts__item {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.contacts__item-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-content:center; */
+    align-items: center;
+}
+.contacts__item-link:hover .contacts__item-p{
+    text-decoration: underline;
+}
+.contacts__item-img {
+    display: block;
+    width: 25px;
+}
+.contacts__item-p {
+    color: #fff;
+    font-size: 9px;
+    margin-top: 6px;
+}
+.all-rights-reserved {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.all-rights-reserved__p {
+    text-align: center;
     font-size: 10px;
 }
 @media (max-width: 767px) {
