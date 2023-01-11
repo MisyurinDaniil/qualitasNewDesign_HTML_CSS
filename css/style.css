@@ -195,9 +195,9 @@ select {
    */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
     -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
    */
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
@@ -218,9 +218,9 @@ button::-moz-focus-inner,
    */
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -269,8 +269,8 @@ textarea {
    * 2. Remove the padding in IE 10.
    */
 
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -279,8 +279,8 @@ textarea {
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -289,7 +289,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 
-[type='search'] {
+[type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
@@ -298,7 +298,7 @@ textarea {
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
-[type='search']::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -356,17 +356,17 @@ template {
 
 @font-face {
     /* font-weight: 400; */
-    font-family: 'Cuprum';
+    font-family: "Cuprum";
     font-style: normal;
-    src: url('../fonts/Cuprum-VariableFont_wght.woff2') format('woff2'),
-        url('../fonts/Cuprum-VariableFont_wght.woff') format('woff');
+    src: url("../fonts/Cuprum-VariableFont_wght.woff2") format("woff2"),
+        url("../fonts/Cuprum-VariableFont_wght.woff") format("woff");
 }
 @font-face {
     /* font-weight: 400; */
-    font-family: 'OpenSans';
+    font-family: "OpenSans";
     font-style: normal;
-    src: url('../fonts/Opensans.woff2') format('woff2'),
-        url('../fonts/Opensans.woff') format('woff');
+    src: url("../fonts/Opensans.woff2") format("woff2"),
+        url("../fonts/Opensans.woff") format("woff");
 }
 /******************************
 ********** Main ****************
@@ -377,7 +377,7 @@ template {
     box-sizing: border-box;
 }
 body {
-    font-family: 'OpenSans';
+    font-family: "OpenSans";
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -389,7 +389,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Cuprum';
+    font-family: "Cuprum";
     font-weight: 400;
     font-style: normal;
     margin: 0;
@@ -407,14 +407,32 @@ ul {
     margin-right: auto;
     padding-left: 24px;
     padding-right: 24px;
-    max-width: 767px;
+    max-width: 575px;
+}
+@media (min-width: 576px) {
+    .container {
+        padding-left: 48px;
+        padding-right: 48px;
+        max-width: 768px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 /******************************
 ********** HEADER ****************
 *****************************/
 .header {
     height: 568px;
-    background-image: url('../img/manufacturing_process.jpg');
+    background-image: url("../img/manufacturing_process.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -455,7 +473,7 @@ ul {
 }
 .burger::before,
 .burger::after {
-    content: '';
+    content: "";
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -478,14 +496,90 @@ ul {
     width: 100%;
     display: block;
 }
+.h1-main-page {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .h1__title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 400;
     color: #d78e36;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
     margin-top: 278px;
+}
+@media (min-width: 768px) {
+    .h1-title-main-page {
+        width: 70%;
+    }
+    .h1__title {
+        font-size: 50px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-header {
+        height: 80px;
+    }
+    .header__logo {
+        width: 250px;
+    }
+    .h1__title {
+        font-size: 64px;
+    }
+    .h1-title-main-page {
+        width: 840px;
+    }
+    .burger {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .nav__list {
+        list-style: none;
+        display: flex;
+    }
+    .nav__item {
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+    }
+    .nav__item-link {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Cuprum";
+        font-weight: 400;
+        font-style: normal;
+    }
+    .nav-title-underline {
+        opacity: 0;
+        width: 100% !important;
+    }
+    .nav__item:hover .nav-title-underline{
+        opacity: 1;
+    }
+    .nav-link__container {
+        display: flex;
+        /* justify-self: center; */
+        align-items: center;
+    }
+    .triangle {
+        margin-left: 6px;
+        margin-top: 4px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 8px solid #fff;
+    }
 }
 /******************************
 ****** Content / H2 ******
@@ -499,10 +593,21 @@ ul {
 .h2__title {
     font-size: 26px;
 }
-.h2__underline {
+.title-underline {
     width: 34px;
     height: 2px;
     background-color: #d78e36;
+}
+@media (min-width: 576px) {
+    .h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 768px) {
+    .h2__title {
+        font-size: 30px;
+    }
 }
 /******************************
 ****** Content / Catalog ******
@@ -521,7 +626,6 @@ ul {
     padding-right: 12px;
     margin-bottom: 24px;
     width: 50%;
-    /* overflow: hidden; */
 }
 .catalog-item__link {
     overflow: hidden;
@@ -545,10 +649,23 @@ ul {
     font-size: 14px;
     margin: 0;
     position: absolute;
-    top: calc(100% - 34px);
+    top: calc(100% - 38px);
     left: 20px;
 }
-
+@media (min-width: 576px) {
+    .catalog-item {
+        width: calc(100% / 3);
+    }
+}
+@media (min-width: 768px) {
+    .catalog-item {
+        width: calc(100% / 4);
+    }
+    .catalog-item__p {
+        font-size: 16px;
+        top: calc(100% - 44px);
+    }
+}
 /********************************
 **** Content / Our philosophy ****
 *********************************/
@@ -579,7 +696,29 @@ ul {
     line-height: 130%;
     margin-top: 5px;
 }
-
+@media (min-width: 576px) {
+    .philosophy__item {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    .philosophy__item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    .philosophy__item-text {
+        display: block;
+        transform: none;
+        position: static;
+        width: 50%;
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+    .philosophy__item-img {
+        display: block;
+        width: 50%;
+        opacity: 1;
+    }
+}
 /********************************
 **** Content / Servicesy ****
 *********************************/
@@ -596,7 +735,17 @@ ul {
     bottom: 15px;
     left: 15px;
 }
-
+@media (min-width: 576px) {
+    .services__item-p {
+        font-size: 18px;
+    }
+    .services__list {
+        display: flex;
+    }
+    .services__item {
+        width: calc(100% / 3);
+    }
+}
 /********************************
 **** Content / Advantages ****
 *********************************/
@@ -665,7 +814,7 @@ ul {
     flex-direction: column;
     align-items: center;
 }
-.contacts__item-link:hover .contacts__item-p{
+.contacts__item-link:hover .contacts__item-p {
     text-decoration: underline;
 }
 .contacts__item-img {
@@ -685,5 +834,26 @@ ul {
     text-align: center;
     font-size: 12px;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
+    .footer {
+        margin-top: 60px;
+        padding-top: 20px;
+    }
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+    .contacts__item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .contacts__item-p {
+        font-size: 14px;
+    }
+    .all-rights-reserved {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .all-rights-reserved__p {
+        font-size: 14px;
+    }
 }
