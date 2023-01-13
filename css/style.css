@@ -195,9 +195,9 @@ select {
    */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
     -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
    */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
@@ -218,9 +218,9 @@ button::-moz-focus-inner,
    */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -269,8 +269,8 @@ textarea {
    * 2. Remove the padding in IE 10.
    */
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -279,8 +279,8 @@ textarea {
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -289,7 +289,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 
-[type="search"] {
+[type='search'] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
@@ -298,7 +298,7 @@ textarea {
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -356,17 +356,17 @@ template {
 
 @font-face {
     /* font-weight: 400; */
-    font-family: "Cuprum";
+    font-family: 'Cuprum';
     font-style: normal;
-    src: url("../fonts/Cuprum-VariableFont_wght.woff2") format("woff2"),
-        url("../fonts/Cuprum-VariableFont_wght.woff") format("woff");
+    src: url('../fonts/Cuprum-VariableFont_wght.woff2') format('woff2'),
+        url('../fonts/Cuprum-VariableFont_wght.woff') format('woff');
 }
 @font-face {
     /* font-weight: 400; */
-    font-family: "OpenSans";
+    font-family: 'OpenSans';
     font-style: normal;
-    src: url("../fonts/Opensans.woff2") format("woff2"),
-        url("../fonts/Opensans.woff") format("woff");
+    src: url('../fonts/Opensans.woff2') format('woff2'),
+        url('../fonts/Opensans.woff') format('woff');
 }
 /******************************
 ********** Main ****************
@@ -377,7 +377,7 @@ template {
     box-sizing: border-box;
 }
 body {
-    font-family: "OpenSans";
+    font-family: 'OpenSans';
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -389,7 +389,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Cuprum";
+    font-family: 'Cuprum';
     font-weight: 400;
     font-style: normal;
     margin: 0;
@@ -432,9 +432,10 @@ ul {
 *****************************/
 .header {
     height: 568px;
-    background-image: url("../img/manufacturing_process.jpg");
+    background-image: url('../img/manufacturing_process.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    /* background-position: center bottom; */
     background-size: cover;
 }
 .container-header {
@@ -473,7 +474,7 @@ ul {
 }
 .burger::before,
 .burger::after {
-    content: "";
+    content: '';
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -519,6 +520,10 @@ ul {
     }
 }
 @media (min-width: 1200px) {
+    .header {
+        background: url('../img/header_shadow.png') 0 0 repeat-x,
+            url('../img/manufacturing_process.jpg') center/cover no-repeat;
+    }
     .container-header {
         height: 80px;
     }
@@ -547,14 +552,13 @@ ul {
         flex-direction: column;
         margin-top: 20px;
         margin-bottom: 10px;
-
     }
     .nav__item-link {
         display: block;
         color: #fff;
         text-decoration: none;
         font-size: 20px;
-        font-family: "Cuprum";
+        font-family: 'Cuprum';
         font-weight: 400;
         font-style: normal;
     }
@@ -562,7 +566,7 @@ ul {
         opacity: 0;
         width: 100% !important;
     }
-    .nav__item:hover .nav-title-underline{
+    .nav__item:hover .nav-title-underline {
         opacity: 1;
     }
     .nav-link__container {
@@ -609,6 +613,14 @@ ul {
         font-size: 30px;
     }
 }
+@media (min-width: 1200px) {
+    .h2__title {
+        font-size: 36px;
+    }
+    .title-underline {
+        width: 46px;
+    }
+}
 /******************************
 ****** Content / Catalog ******
 *****************************/
@@ -644,6 +656,7 @@ ul {
     transform: scale(1.2);
 }
 .catalog-item__p {
+    font-family: 'Cuprum';
     width: calc(100% - 38px);
     text-transform: uppercase;
     font-size: 14px;
@@ -659,13 +672,26 @@ ul {
 }
 @media (min-width: 768px) {
     .catalog-item {
-        width: calc(100% / 4);
+        width: calc(100% / 5);
     }
     .catalog-item__p {
-        font-size: 16px;
-        top: calc(100% - 44px);
+        font-size: 14px;
+        top: calc(100% - 40px);
     }
 }
+@media (min-width: 1200px) {
+    .catalog-item {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+    }
+    .catalog__list {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: -30px;
+    }
+}
+
 /********************************
 **** Content / Our philosophy ****
 *********************************/
@@ -719,6 +745,18 @@ ul {
         opacity: 1;
     }
 }
+@media (min-width: 1200px) {
+    .philosophy__item-title {
+        font-size: 24px;
+    }
+    .philosophy__item-p {
+        font-size: 16px;
+    }
+    .philosophy__item-text {
+        padding-left: 70px;
+        padding-right: 130px;
+    }
+}
 /********************************
 **** Content / Servicesy ****
 *********************************/
@@ -730,6 +768,7 @@ ul {
     width: 100%;
 }
 .services__item-p {
+    font-family: 'Cuprum';
     font-size: 20px;
     position: absolute;
     bottom: 15px;
@@ -744,6 +783,11 @@ ul {
     }
     .services__item {
         width: calc(100% / 3);
+    }
+}
+@media (min-width: 1200px) {
+    .services__item-p {
+        font-size: 24px;
     }
 }
 /********************************
@@ -773,6 +817,15 @@ ul {
     text-align: center;
     margin-top: 3px;
     font-size: 12px;
+}
+@media (min-width: 1200px) {
+    .advantages__item {
+        width: 150px;
+        height: 150px;
+    }
+    .advantages__item-img {
+        height: 50px;
+    }
 }
 /********************************
 **** Content / Footer ****
@@ -842,6 +895,9 @@ ul {
     .footer__logo {
         margin-bottom: 20px;
     }
+    .contacts__list {
+        justify-content: space-evenly;
+    }
     .contacts__item {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -855,5 +911,10 @@ ul {
     }
     .all-rights-reserved__p {
         font-size: 14px;
+    }
+}
+@media (min-width: 1200px) {
+    .contacts__item-img {
+        width: 35px;
     }
 }
