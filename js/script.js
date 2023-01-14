@@ -36,16 +36,21 @@ if (isMobile.any()) {
     body.classList.add('touch');
     let navItemClick = document.querySelectorAll('.nav__item-click');
     for (i = 0; i < navItemClick.length; i++) {
-        navItemClick[i].addEventListener('click', function () {
+        navItemClick[i].addEventListener('click', function (event) {
+			event.stopImmediatePropagation();
             this.querySelector('.sub-nav__list').classList.toggle('open');
 			navItemClick.forEach(element => {
-				console.log(element == this)
 				if (element !== this) {
 					element.querySelector('.sub-nav__list').classList.remove('open');
 				}
 			});
         });
     }
+	body.addEventListener('click', function() {
+		navItemClick.forEach(element => {
+			element.querySelector('.sub-nav__list').classList.remove('open');
+		});
+	})
 } else {
     body.classList.add('mouse');
 }
