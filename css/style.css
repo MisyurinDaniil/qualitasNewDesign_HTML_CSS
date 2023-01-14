@@ -569,6 +569,7 @@ ul {
         opacity: 1;
     }
     .nav-link__container {
+        cursor: pointer;
         display: flex;
         align-items: center;
     }
@@ -610,11 +611,20 @@ ul {
         font-weight: 400;
         font-style: normal;
     }
-    .nav__item:hover .sub-nav__list {
+    /* .nav__item:hover .sub-nav__list {
         display: block;
     }
     .sub-nav__item-link:hover {
         background-color: #282828;
+    } */
+    body.mouse .nav__item:hover .sub-nav__list {
+        display: block;
+    }
+    .sub-nav__item-link:hover {
+        background-color: #282828;
+    }
+    body.touch .open {
+        display: block;
     }
 }
 /******************************
