@@ -22,7 +22,8 @@
                 <div class="burger">
                     <span class="burger__span"></span>
                 </div>
-                <nav class="nav">
+                <nav class="nav nav__display-none">
+                    <div class="close-button"></div>
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__item-link">Главная</a>
@@ -30,7 +31,7 @@
                                 class="title-underline nav-title-underline"
                             ></span>
                         </li>
-                        <li class="nav__item nav__item-click">
+                        <li class="nav__item">
                             <div class="nav-link__container">
                                 <a href="#" class="nav__item-link">Каталог</a>
                                 <div class="triangle"></div>
@@ -38,7 +39,7 @@
                             <span
                                 class="title-underline nav-title-underline"
                             ></span>
-                            <ul class="sub-nav__list">
+                            <ul class="sub-nav__list sub-nav__list-none">
                                 <li class="sub-nav__item">
                                     <a href="" class="sub-nav__item-link"
                                         >Ремни</a
@@ -87,7 +88,7 @@
                                 class="title-underline nav-title-underline"
                             ></span>
                         </li>
-                        <li class="nav__item nav__item-click">
+                        <li class="nav__item">
                             <div class="nav-link__container">
                                 <a href="#" class="nav__item-link"
                                     >Информация</a
@@ -97,7 +98,7 @@
                             <span
                                 class="title-underline nav-title-underline"
                             ></span>
-                            <ul class="sub-nav__list">
+                            <ul class="sub-nav__list sub-nav__list-none">
                                 <li class="sub-nav__item">
                                     <a href="" class="sub-nav__item-link"
                                         >Способы доставки</a
@@ -481,4 +482,5 @@
     </body>
     <!-- Подключаем файл скриптов -->
     <script src="js/script.js"></script>
+    <script src="js/jquery-3.6.3.slim.min.js"></script>
 </html>

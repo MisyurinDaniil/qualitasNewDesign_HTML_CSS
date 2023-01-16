@@ -28,29 +28,45 @@ let isMobile = {
     },
 };
 
-// Показывает или прячет выпладающее меню (Каталог, Информация) для мобильных устройств
-// Shows or hides the dropdown menu (Catalog, Information) for mobile devices
+// Показывает или прячет выпладающее (sub-nav) меню (Каталог, Информация) для мобильных устройств
+// Shows or hides the dropdown (sub-nav) menu (Catalog, Information) for mobile devices
 
 let body = document.querySelector('body');
 if (isMobile.any()) {
     body.classList.add('touch');
-    let navItemClick = document.querySelectorAll('.nav__item-click');
-    for (i = 0; i < navItemClick.length; i++) {
-        navItemClick[i].addEventListener('click', function (event) {
-			event.stopImmediatePropagation();
-            this.querySelector('.sub-nav__list').classList.toggle('open');
-			navItemClick.forEach(element => {
-				if (element !== this) {
-					element.querySelector('.sub-nav__list').classList.remove('open');
-				}
-			});
+
+    subNavList = document.querySelectorAll('.sub-nav__list');
+    for (let i = 0; i < subNavList.length; i++) {
+        subNavList[i].parentNode.addEventListener('click', function (event) {
+            event.stopImmediatePropagation();
+            subNavList[i].classList.toggle('sub-nav__list-none');
+            subNavList.forEach((element) => {
+                if (subNavList[i] != element) {
+                    element.classList.add('sub-nav__list-none');
+                }
+            });
+            
+            
         });
     }
-	body.addEventListener('click', function() {
-		navItemClick.forEach(element => {
-			element.querySelector('.sub-nav__list').classList.remove('open');
-		});
-	})
 } else {
     body.classList.add('mouse');
 }
+
+// Обработка события нажатия на кнопку бургреа.
+// Показывает мобильную версию меню (nav)
+let burger = document.querySelector('.burger');
+burger.addEventListener('click', function () {
+    if (isMobile.any()) {
+        document.querySelector('.nav').classList.toggle('nav__display-none');
+    }
+});
+
+// Обработка события нажатия на кнопку закрытия мобильной версии меню.
+// Прячет мобильную версию меню (nav)
+closeButton = document.querySelector('.close-button');
+closeButton.addEventListener('click', function () {
+    if (isMobile.any()) {
+        document.querySelector('.nav').classList.toggle('nav__display-none');
+    }
+});
