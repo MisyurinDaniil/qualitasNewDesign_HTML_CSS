@@ -600,6 +600,9 @@ ul {
     font-weight: 400;
     font-style: normal;
 }
+.overflow-hidden {
+    overflow: hidden;
+}
 @media (min-width: 576px) {
     .nav {
         width: 70%;

@@ -59,6 +59,7 @@ let burger = document.querySelector('.burger');
 burger.addEventListener('click', function () {
     if (isMobile.any()) {
         document.querySelector('.nav').classList.toggle('nav__display-none');
+        document.querySelector('body').classList.toggle('overflow-hidden');
     }
 });
 
@@ -68,5 +69,6 @@ closeButton = document.querySelector('.close-button');
 closeButton.addEventListener('click', function () {
     if (isMobile.any()) {
         document.querySelector('.nav').classList.toggle('nav__display-none');
+        document.querySelector('body').classList.toggle('overflow-hidden');
     }
 });
