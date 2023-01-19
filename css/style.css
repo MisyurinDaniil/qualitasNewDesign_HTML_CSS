@@ -447,7 +447,6 @@ ul {
     background-image: url('../img/manufacturing_process.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    /* background-position: center bottom; */
     background-size: cover;
 }
 .container-header {
@@ -517,32 +516,32 @@ ul {
     margin-top: 278px;
 }
 .close-button {
-	position: absolute;
-	top: 24px;
-	right: 24px;
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 .close-button::before,
 .close-button::after {
-	content: '';
-	position: absolute;
-	top: 10px;
-	display: block;
-	width: 30px;
-	height: 2px;
-	background: #fff;
+    content: '';
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
 }
 .close-button::before {
-	transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .close-button::after {
-	transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 .nav {
     display: flex;
-    overflow: auto;
+    overflow: visible;
     flex-direction: column;
     align-items: flex-start;
     width: 80%;
@@ -610,6 +609,9 @@ ul {
 }
 .overflow-hidden {
     overflow: hidden;
+}
+.overflow-auto {
+    overflow: auto;
 }
 @media (min-width: 576px) {
     .nav {
@@ -709,7 +711,7 @@ ul {
         background-color: #282828;
     }
     body.mouse .nav__item:hover .sub-nav__list {
-        display: block;
+        display: block !important;
     }
 }
 /******************************
