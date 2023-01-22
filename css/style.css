@@ -633,6 +633,9 @@ ul {
     }
 }
 @media (min-width: 768px) {
+    .header {
+        height: 550px;
+    }
     .header-main-page {
         background-image: url('../img/manufacturing_process_768x550.jpg');
     }
@@ -647,6 +650,9 @@ ul {
     }
 }
 @media (min-width: 1200px) {
+    .header {
+        height: 760px;
+    }
     .header-main-page {
         background-image: url('../img/manufacturing_process_1200x760.jpg');
     }
@@ -1027,6 +1033,7 @@ ul {
     width: 100%;
     display: block;
     transition: 0.5s;
+    filter: brightness(90%);
 }
 .product__text {
     text-transform: uppercase;
