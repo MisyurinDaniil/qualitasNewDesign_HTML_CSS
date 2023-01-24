@@ -1,3 +1,40 @@
+const mainCarouselEl = document.querySelector('#mainCarousel');
+const thumbCarouselEl = document.querySelector('#thumbCarousel');
+
+if (mainCarouselEl && thumbCarouselEl) {
+    const mainCarousel = new Carousel(mainCarouselEl, {
+        Dots: false,
+    });
+
+    //Fancybox product slider
+    // Thumbnails
+    const thumbCarousel = new Carousel(thumbCarouselEl, {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: false,
+    });
+    //
+    //Fancybox product slider
+    // Customize Fancybox
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Carousel: {
+            on: {
+                change: (that) => {
+                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                        friction: 0,
+                    });
+                },
+            },
+        },
+    });
+}
+
 // isMobile. Проверяет зашел ли текущий пользователь с мобильного утсройства (планшет, телефон)
 // Checks if the current user is logged in from a mobile device (tablet, phone)
 
@@ -45,8 +82,6 @@ if (isMobile.any()) {
                     element.classList.add('sub-nav__list-none');
                 }
             });
-            
-            
         });
     }
 } else {

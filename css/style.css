@@ -443,15 +443,17 @@ ul {
 ********** HEADER ****************
 *****************************/
 .header {
-    height: 568px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.header-main-page {
+.header_big {
+    height: 568px;
+}
+.header_home-page {
     background-image: url('../img/manufacturing_process_320x568.jpg');
 }
-.header-category-page {
+.header_category-page {
     background-image: url('../img/belt_category_320x568.jpg');
 }
 .container-header {
@@ -512,9 +514,11 @@ ul {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+}
+.h1-title_home {
     margin-top: 218px;
 }
-.h1_category {
+.h1-title_category {
     margin-top: 278px;
 }
 .h1_yellow {
@@ -619,13 +623,13 @@ ul {
     overflow: auto;
 }
 @media (min-width: 576px) {
-    .h1__title {
+    .h1-title_home {
         margin-top: 278px;
     }
-    .header-main-page {
+    .header_home-page {
         background-image: url('../img/manufacturing_process_576x568.jpg');
     }
-    .header-category-page {
+    .header_category-page {
         background-image: url('../img/belt_category_576x568.jpg');
     }
     .nav {
@@ -633,13 +637,13 @@ ul {
     }
 }
 @media (min-width: 768px) {
-    .header {
+    .header_big {
         height: 550px;
     }
-    .header-main-page {
+    .header_home-page {
         background-image: url('../img/manufacturing_process_768x550.jpg');
     }
-    .header-category-page {
+    .header_category-page {
         background-image: url('../img/belt_category_768x550.jpg');
     }
     .h1__title {
@@ -650,13 +654,13 @@ ul {
     }
 }
 @media (min-width: 1200px) {
-    .header {
+    .header_big {
         height: 760px;
     }
-    .header-main-page {
+    .header_home-page {
         background-image: url('../img/manufacturing_process_1200x760.jpg');
     }
-    .header-category-page {
+    .header_category-page {
         background-image: url('../img/belt_category_1200x760.jpg');
     }
     /* .header {
@@ -671,6 +675,8 @@ ul {
     }
     .h1__title {
         font-size: 64px;
+    }
+    .h1-title_home {
         width: 80%;
     }
     .h1 {
@@ -1023,7 +1029,7 @@ ul {
     text-decoration: none;
     color: #fff;
 }
-.pruduct__link:hover .product__img{
+.pruduct__link:hover .product__img {
     transform: scale(1.2);
 }
 .product__img-wrap {
@@ -1039,11 +1045,11 @@ ul {
     text-transform: uppercase;
     line-height: 125%;
 }
-.product__title{
+.product__title {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.product__price{
+.product__price {
     font-size: 16px;
 }
 @media (min-width: 576px) {
@@ -1067,6 +1073,112 @@ ul {
         font-size: 18px;
     }
 }
+/********************************
+**** Content / END-PRODUCT ****
+*********************************/
+
+.h1_end-product {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.h1-title_end-product {
+    font-size: 40px;
+}
+.carousel__button {
+    width: 30px !important;
+    height: 30px !important;
+}
+.carousel__button.is-prev {
+    left: 0 !important;
+}
+.carousel__button.is-next {
+    right: 0 !important;
+}
+#mainCarousel {
+    width: 100%;
+    --carousel-button-color: #170724;
+    --carousel-button-bg: #fff;
+    --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+        0 1px 3px 0 rgb(0 0 0 / 12%);
+    --carousel-button-svg-width: 20px;
+    --carousel-button-svg-height: 20px;
+    --carousel-button-svg-stroke-width: 2.5;
+}
+
+#mainCarousel .carousel__slide {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainCarousel .carousel__slide img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+#mainCarousel .carousel__button.is-prev {
+    left: -1.5rem;
+}
+
+#mainCarousel .carousel__button.is-next {
+    right: -1.5rem;
+}
+
+#mainCarousel .carousel__button:focus {
+    outline: none;
+}
+#thumbCarousel {
+    width: 100%;
+    margin-top: 10px;
+}
+#thumbCarousel .carousel__slide {
+    opacity: 0.5;
+    padding: 0;
+    margin: 0.25rem;
+    width: 96px;
+    height: 64px;
+}
+#thumbCarousel .carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#thumbCarousel .carousel__slide.is-nav-selected {
+    opacity: 1;
+}
+#thumbCarousel .panzoom__content {
+    display: block;
+}
+/* @media (min-width: 576px) {
+    #mainCarousel {
+        max-width: 300px;
+    }
+    #thumbCarousel{
+        max-width: 300px;
+    }
+}
+@media (min-width: 768px) {
+    .end-product-img {
+        width: 300px;
+        flex-shrink: 0;
+    }
+}
+@media (min-width: 1200px) {
+    .end-product-img {
+        width: 330px;
+    }
+    #mainCarousel {
+        max-width: 330px;
+    }
+    #thumbCarousel{
+        max-width: 330px;
+    }
+} */
+
 /********************************
 ************ Footer ************
 *********************************/
