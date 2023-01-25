@@ -412,9 +412,15 @@ ul {
 .main {
     min-height: calc(100vh - 820px);
 }
+.main_small-header {
+    min-height: calc(100vh - 322px);
+}
 @media (min-width: 576px) {
     .main {
         min-height: calc(100vh - 824px);
+    }
+    .main_small-header {
+        min-height: calc(100vh - 326px);
     }
     .container {
         padding-left: 48px;
@@ -426,6 +432,9 @@ ul {
     .main {
         min-height: calc(100vh - 883px);
     }
+    .main_small-header {
+        min-height: calc(100vh - 385px);
+    }
     .container {
         max-width: 1200px;
     }
@@ -433,6 +442,9 @@ ul {
 @media (min-width: 1200px) {
     .main {
         min-height: calc(100vh - 893px);
+    }
+    .main_small-header {
+        min-height: calc(100vh - 425px);
     }
     .container {
         padding-left: 15px;
@@ -449,6 +461,9 @@ ul {
 }
 .header_big {
     height: 568px;
+}
+.header_small {
+    background-color: #191919;
 }
 .header_home-page {
     background-image: url('../img/manufacturing_process_320x568.jpg');
@@ -602,6 +617,7 @@ ul {
 }
 .sub-nav__list {
     padding-left: 20px;
+    z-index: 1;
 }
 .sub-nav__item {
     list-style: none;
@@ -1084,6 +1100,43 @@ ul {
 .h1-title_end-product {
     font-size: 40px;
 }
+.end-product-spec__list {
+    list-style: none;
+}
+.end-product-spec__item {
+    font-size: 12px;
+    padding-bottom: 3px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+.end-product-spec__price {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.end-product-spec__description {
+    margin-top: 15px;
+}
+.end-product-spec__description_p {
+    text-transform: none;
+}
+.main-button {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color:#d78e36;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/**** Content / END-PRODUCT-SLIDER****/
+
 .carousel__button {
     width: 30px !important;
     height: 30px !important;
@@ -1153,31 +1206,95 @@ ul {
 #thumbCarousel .panzoom__content {
     display: block;
 }
-/* @media (min-width: 576px) {
-    #mainCarousel {
-        max-width: 300px;
+@media (min-width: 576px) {
+    #thumbCarousel .carousel__slide {
+        width: 144px;
+        height: 96px;
     }
-    #thumbCarousel{
-        max-width: 300px;
+    .carousel__button {
+        width: 35px !important;
+        height: 35px !important;
     }
 }
 @media (min-width: 768px) {
+    .h1_end-product {
+        margin-top: 20px;
+    }
+    .h1-title_end-product {
+        font-size: 50px;
+    }
+    .end-product-spec__item {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .end-product-spec__price {
+        font-size: 28px;
+    }
+    .end-product_wrap {
+        display: flex;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
     .end-product-img {
-        width: 300px;
-        flex-shrink: 0;
+        width: 50%;
+        padding-left: 12px;
+        margin-right: 12px;
+    }
+    .end-product-spec {
+        width: 50%;
+        padding-left: 12px;
+        margin-right: 12px;
+    }
+    .main-button {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+    #thumbCarousel .carousel__slide {
+        width: 96px;
+        height: 64px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .h1_end-product {
+        justify-content: flex-start;
+    }
+    .h1-title_end-product {
+        font-size: 54px;
+    }
+    .end-product_wrap {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .end-product-img {
+        padding-left: 15px;
+        margin-right: 15px;
+    }
+    .end-product-spec {
+        padding-left: 15px;
+        margin-right: 15px;
+    }
+    .end-product-spec__item {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .end-product-spec__price {
+        font-size: 28px;
+    }
+    #thumbCarousel .carousel__slide {
+        width: 144px;
+        height: 96px;
+    }
+    .main-button {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+    .carousel__button {
+        width: 40px !important;
+        height: 40px !important;
     }
 }
-@media (min-width: 1200px) {
-    .end-product-img {
-        width: 330px;
-    }
-    #mainCarousel {
-        max-width: 330px;
-    }
-    #thumbCarousel{
-        max-width: 330px;
-    }
-} */
 
 /********************************
 ************ Footer ************
