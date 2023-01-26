@@ -1298,11 +1298,14 @@ ul {
         height: 40px !important;
     }
 }
-/********************************
-************ Contacts ************
-*********************************/
-.contacts-img__image {
+/********************************************************
+************ Contacts / Delivery / Payment ************
+*********************************************************/
+.info-img-block__image {
     width: 100%;
+}
+.info-text-block {
+    font-size: 16px;
 }
 .contacts-list {
     margin-top: 20px;
@@ -1328,19 +1331,21 @@ ul {
 .cotacts-item__link:hover {
     text-decoration: underline;
 }
-
+.delivery__item {
+    list-style: none;
+}
 @media (min-width: 768px) {
-    .contacts_wrap {
+    .information_wrap {
         display: flex;
         margin-left: -12px;
         margin-right: -12px;
     }
-    .contacts-img {
+    .info-img-block {
         width: 50%;
         padding-left: 12px;
         padding-right: 12px;
     }
-    .contacts-info {
+    .info-text-block {
         width: 50%;
         padding-left: 12px;
         padding-right: 12px;
@@ -1350,6 +1355,20 @@ ul {
     }
 }
 @media (min-width: 1200px) {
+    .information_wrap {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .info-img-block {
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .info-text-block {
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .contacts-list {
         margin-top: 0px;
     }
