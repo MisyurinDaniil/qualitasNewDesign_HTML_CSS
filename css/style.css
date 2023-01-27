@@ -471,6 +471,10 @@ ul {
 .header_category-page {
     background-image: url('../img/belt_category_320x568.jpg');
 }
+.header_blog-page {
+    background-image: url('../img/blog_320x568_2.jpg');
+}
+
 .container-header {
     height: 70px;
     display: flex;
@@ -648,6 +652,9 @@ ul {
     .header_category-page {
         background-image: url('../img/belt_category_576x568.jpg');
     }
+    .header_blog-page {
+        background-image: url('../img/blog_576x568_2.jpg');
+    }
     .nav {
         width: 70%;
     }
@@ -661,6 +668,9 @@ ul {
     }
     .header_category-page {
         background-image: url('../img/belt_category_768x550.jpg');
+    }
+    .header_blog-page {
+        background-image: url('../img/blog_768x550_2.jpg');
     }
     .h1__title {
         font-size: 54px;
@@ -678,6 +688,9 @@ ul {
     }
     .header_category-page {
         background-image: url('../img/belt_category_1200x760.jpg');
+    }
+    .header_blog-page {
+        background-image: url('../img/blog_1200x760_2.jpg');
     }
     /* .header {
         background: url('../img/header_shadow.png') 0 0 repeat-x,
