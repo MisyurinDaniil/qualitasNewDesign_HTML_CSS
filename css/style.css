@@ -761,7 +761,8 @@ ul {
         font-size: 18px;
     }
     .sub-nav__item-link:hover {
-        background-color: #282828;
+        /* background-color: #282828; */
+        background-color: #0D0D0D;
     }
     body.mouse .nav__item:hover .sub-nav__list {
         display: block !important;
@@ -1301,15 +1302,20 @@ ul {
 /********************************************************
 ************ Contacts / Delivery / Payment ************
 *********************************************************/
+.info-img-block {
+    margin-bottom: 20px;
+}
 .info-img-block__image {
     width: 100%;
 }
 .info-text-block {
     font-size: 16px;
+    line-height: 20px;
 }
-.contacts-list {
-    margin-top: 20px;
+.info-text-block__item {
+    margin-bottom: 20px;
 }
+
 .cotacts-item {
     list-style: none;
     margin-bottom: 15px;
@@ -1331,8 +1337,10 @@ ul {
 .cotacts-item__link:hover {
     text-decoration: underline;
 }
+
+
 .delivery__item {
-    list-style: none;
+    margin-left: 20px;
 }
 @media (min-width: 768px) {
     .information_wrap {
@@ -1355,6 +1363,10 @@ ul {
     }
 }
 @media (min-width: 1200px) {
+    .info-text-block {
+        font-size: 20px;
+        line-height: 24px;
+    }
     .information_wrap {
         margin-left: -20px;
         margin-right: -20px;
