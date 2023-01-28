@@ -528,18 +528,18 @@ ul {
     display: block;
 }
 .h1__title {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
 }
-.h1-title_home {
-    margin-top: 218px;
+.h1_top-margin {
+    margin-top: 292px;
 }
-.h1-title_category {
+/* .h1-title_category {
     margin-top: 278px;
-}
+} */
 .h1_yellow {
     color: #d78e36;
 }
@@ -643,8 +643,8 @@ ul {
     overflow: auto;
 }
 @media (min-width: 576px) {
-    .h1-title_home {
-        margin-top: 278px;
+    .h1__title {
+        font-size: 46px;
     }
     .header_home-page {
         background-image: url('../img/manufacturing_process_576x568.jpg');
