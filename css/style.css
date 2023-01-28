@@ -686,17 +686,17 @@ ul {
     .header_home-page {
         /* background-image: url('../img/manufacturing_process_1200x760.jpg'); */
         background: url('../img/header_shadow.png') 0 0 repeat-x,
-        url('../img/manufacturing_process_1200x760.jpg') center/cover no-repeat;
+            url('../img/manufacturing_process_1200x760.jpg') center/cover no-repeat;
     }
     .header_category-page {
         /* background-image: url('../img/belt_category_1200x760.jpg'); */
         background: url('../img/header_shadow.png') 0 0 repeat-x,
-        url('../img/belt_category_1200x760.jpg') center/cover no-repeat;
+            url('../img/belt_category_1200x760.jpg') center/cover no-repeat;
     }
     .header_blog-page {
         /* background-image: url('../img/blog_1200x760_2.jpg'); */
         background: url('../img/header_shadow.png') 0 0 repeat-x,
-        url('../img/blog_1200x760_2.jpg') center/cover no-repeat;
+            url('../img/blog_1200x760_2.jpg') center/cover no-repeat;
     }
     /* .header {
         background: url('../img/header_shadow.png') 0 0 repeat-x,
@@ -1229,6 +1229,56 @@ ul {
 #thumbCarousel .panzoom__content {
     display: block;
 }
+
+/*************************
+********Bottom CSS file*****
+*****IPORTANT CSS CLASS****
+*******maximum value*****
+**************************/
+.display-none {
+    display: none;
+}
+
+/**** Content / END-PRODUCT-MODAL-WINDOW****/
+
+.modal-window {
+    display: none;
+    background-color: #1c1c1c;
+    color: #efefef;
+    padding: 40px 20px 20px 20px;
+}
+.modal-window__title {
+    padding: 0;
+    color: #efefef;
+}
+.modal-window__text {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.modal-window__list {
+    padding: 0;
+    margin: 0;
+}
+.modal-window__list-item {
+    font-size: 14px;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding-top: 10px;
+    margin: 0;
+}
+.modal-window__input_title {
+    display: block;
+    margin-bottom: 5px;
+}
+.modal-window__input {
+    display: block;
+    min-width: 268px;
+}
+.fancybox__content > .carousel__button.is-close {
+    top: 0;
+}
 @media (min-width: 576px) {
     #thumbCarousel .carousel__slide {
         width: 144px;
@@ -1237,6 +1287,19 @@ ul {
     .carousel__button {
         width: 35px !important;
         height: 35px !important;
+    }
+    .modal-window {
+        font-size: 20px;
+    }
+    .modal-window__input {
+        display: block;
+        min-width: 350px;
+    }
+    .modal-window {
+        padding: 40px;
+    }
+    .modal-window__list-item {
+        padding-top: 15px;
     }
 }
 @media (min-width: 768px) {
