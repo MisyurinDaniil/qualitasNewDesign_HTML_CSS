@@ -97,10 +97,10 @@
                                     >
                                 </li>
                                 <li class="sub-nav__item">
-                                    <a href="catagory.html" class="sub-nav__item-link">О нас</a>
+                                    <a href="aboutus.html" class="sub-nav__item-link">О нас</a>
                                 </li>
                                 <li class="sub-nav__item">
-                                    <a href="catagory.html" class="sub-nav__item-link"
+                                    <a href="help.html" class="sub-nav__item-link"
                                         >Часто задаваемые вопросы</a
                                     >
                                 </li>
@@ -208,9 +208,10 @@
             </div>
             <div id="modal-window" class="modal-window">
                 <div class="modal-window__content">
-                    <h1 class="modal-window__title">Заполните форму</h1>
+                    <!-- <h1 class="modal-window__title">Заполните форму</h1> -->
                     <p class="modal-window__text">
-                        Укажите детали заказа и мы свяжемся с вами в ближайшее время
+                        Укажите детали заказа и мы свяжимся с вами или воспользуйтесь удобным для вас способом и напишите нам. 
+                        <a href="contacts.html" class="modal-window__contacts-link">Наши контакты.</a>
                     </p>
                     <form action="{% url 'makeorder' %}" method="POST" class="modal-window__form">
                         <!-- {% csrf_token %} -->
@@ -265,7 +266,7 @@
                                 <textarea
                                     name="customer_comment"
                                     cols="20"
-                                    rows="10"
+                                    rows="5"
                                     class="modal-window__input"
                                     placeholder="Комментарий"
                                     id="input-commet"
@@ -284,13 +285,25 @@
                 <div class="modal-window__order-true display-none">
                     <br />
                     Ваш заказ оформлен, мы свяжемся с Вами в ближайшее время. <br />
-                    Вы также можете написать нам в социальных сетях.
+                    Вы также можете написать нам в социальных сетях.<br />
                 </div>
                 <div class="modal-window__order-false display-none">
                     <br />
                     Приносим извинения за временные неполадки. <br />
-                    Попробуйте оформить заказ подзднее или свяжитесь с нами в социальных сетях.
+                    Попробуйте оформить заказ подзднее или свяжитесь с нами в социальных сетях.<br />
                 </div>
+                <!-- <div class="modal-window__order-true">
+                    <br />
+                    Ваш заказ оформлен, мы свяжемся с Вами в ближайшее время. <br />
+                    Вы также можете написать нам в социальных сетях.<br />
+                    <a href="contacts.html" class="modal-window__contacts-link">Наши контакты.</a>
+                </div>
+                <div class="modal-window__order-false">
+                    <br />
+                    Приносим извинения за временные неполадки. <br />
+                    Попробуйте оформить заказ подзднее или свяжитесь с нами в социальных сетях.<br />
+                    <a href="contacts.html" class="modal-window__contacts-link">Наши контакты.</a>
+                </div> -->
             </div>
         </section>
 

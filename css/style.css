@@ -1244,18 +1244,21 @@ ul {
 .modal-window {
     display: none;
     background-color: #1c1c1c;
-    color: #efefef;
+    color: #fff;
     padding: 40px 20px 20px 20px;
 }
-.modal-window__title {
-    padding: 0;
-    color: #efefef;
-}
+
 .modal-window__text {
-    font-size: 18px;
-    text-transform: uppercase;
+    font-family: 'Cuprum';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
     margin-top: 15px;
     margin-bottom: 10px;
+    max-width: 550px;
+}
+.modal-window__contacts-link {
+    color: #fff;
 }
 .modal-window__list {
     padding: 0;
@@ -1276,8 +1279,26 @@ ul {
     display: block;
     min-width: 268px;
 }
+.main-button__submit-modal {
+    margin-top: 8px;
+}
 .fancybox__content > .carousel__button.is-close {
     top: 0;
+}
+.carousel__button.is-close {
+    width: 50px !important;
+    height: 50px !important;
+}
+.carousel__button.is-close svg {
+    width: 30px;
+    height: 30px;
+}
+.fancybox__backdrop {
+    background-color: #191919;
+    opacity: 0.5;
+}
+.fancybox__slide {
+    padding-top: 8px;
 }
 @media (min-width: 576px) {
     #thumbCarousel .carousel__slide {
@@ -1287,6 +1308,10 @@ ul {
     .carousel__button {
         width: 35px !important;
         height: 35px !important;
+    }
+    .carousel__button svg {
+        width: 30px;
+        height: 30px;
     }
     .modal-window {
         font-size: 20px;
